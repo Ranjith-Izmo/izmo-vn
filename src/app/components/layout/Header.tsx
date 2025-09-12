@@ -1,55 +1,23 @@
 import React from "react";
 import CustomDropdown from "../common/CustomDropdown";
-import { Color } from "antd/es/color-picker";
 import Image from "next/image";
-
-const dealerItems = [
-  { key: "1", label: "Dealer 01" },
-  { key: "2", label: "Dealer 02" },
-  { key: "3", label: "Dealer 03" },
-  { key: "4", label: "Dealer 04" },
-  { key: "5", label: "Dealer 05" },
-];
-
-const makeitems = [
-  { key: "1", label: "Make 01" },
-  { key: "2", label: "Make 02" },
-  { key: "3", label: "Make 03" },
-  { key: "4", label: "Make 04" },
-  { key: "5", label: "Make 05" },
-];
-
-const modelItems = [
-  { key: "1", label: "Model 01" },
-  { key: "2", label: "Model 02" },
-  { key: "3", label: "Model 03" },
-  { key: "4", label: "Model 04" },
-  { key: "5", label: "Model 05" },
-];
-
-const searchRadiusItems = [
-  { key: "1", label: "10k" },
-  { key: "2", label: "20k" },
-  { key: "3", label: "30k" },
-  { key: "4", label: "40k" },
-  { key: "5", label: "50k" },
-];
-
-const previousDaysItems = [
-  { key: "1", label: "10 Days" },
-  { key: "2", label: "20 Days" },
-  { key: "3", label: "30 Days" },
-  { key: "4", label: "40 Days" },
-  { key: "5", label: "50 Days" },
-];
+import {
+  dealerItems,
+  makeitems,
+  modelItems,
+  searchRadiusItems,
+  previousDaysItems
+} from "../../utils/menuItems";
 
 const Header = () => {
   return (
     <>
       <header
         style={{
-          position: "fixed",
+          width: "calc(100% - 336px)",
+          position: "relative",
           top: 0,
+          background: '#fafbfc',
           left: "336px",
           right: 0,
           zIndex: 150,
@@ -98,7 +66,7 @@ const Header = () => {
             bg="#fff"
           />
         </div>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div style={{ display: "flex", justifyContent: "space-between"}}>
           <div
             style={{
               height: "58px",

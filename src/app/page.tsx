@@ -1,10 +1,10 @@
 import React from 'react'
+import Dashboard from './Dashboard/components'
 
 const page = () => {
   return (
-    <div>
-      <div>page</div>
-    </div>
+       <Dashboard />
+    
   )
 }
 

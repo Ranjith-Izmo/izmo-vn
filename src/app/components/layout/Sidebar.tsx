@@ -1,127 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-
-const iconMap: Record<string, string> = {
-  dashboard: "/sidebarIcons/dashboard.svg",
-  inventory: "/sidebarIcons/Inventory.svg",
-  "market-analytics": "/sidebarIcons/market-analytics.svg",
-  "demand-map": "/sidebarIcons/demand-map.svg",
-  "demand-analysis": "/sidebarIcons/demand-analysis.svg",
-  "pricing-intelligence": "/sidebarIcons/pricing-intelligence.svg",
-  "sales-velocity": "/sidebarIcons/sales-velocity.svg",
-  "competitive-benchmark": "/sidebarIcons/Competitive.svg",
-  settings: "/sidebarIcons/settings.svg",
-};
-
-const menuItems = [
-  {
-    key: "dashboard",
-    icon: (
-      <Image
-        src={iconMap["dashboard"]}
-        alt="Dashboard"
-        width={32}
-        height={32}
-      />
-    ),
-    label: "Dashboard",
-  },
-  {
-    key: "inventory",
-    icon: (
-      <Image
-        src={iconMap["inventory"]}
-        alt="Inventory"
-        width={32}
-        height={32}
-      />
-    ),
-    label: "Inventory",
-  },
-  {
-    key: "market-analytics",
-    icon: (
-      <Image
-        src={iconMap["market-analytics"]}
-        alt="Market Analytics"
-        width={32}
-        height={32}
-      />
-    ),
-    label: "Market Analytics",
-  },
-  {
-    key: "demand-map",
-    icon: (
-      <Image
-        src={iconMap["demand-map"]}
-        alt="Demand Map"
-        width={32}
-        height={32}
-      />
-    ),
-    label: "Demand Map",
-  },
-  {
-    key: "demand-analysis",
-    icon: (
-      <Image
-        src={iconMap["demand-analysis"]}
-        alt="Demand Analysis"
-        width={32}
-        height={32}
-      />
-    ),
-    label: "Demand Analysis",
-  },
-  {
-    key: "pricing-intelligence",
-    icon: (
-      <Image
-        src={iconMap["pricing-intelligence"]}
-        alt="Pricing Intelligence"
-        width={32}
-        height={32}
-      />
-    ),
-    label: "Pricing Intelligence",
-  },
-  {
-    key: "sales-velocity",
-    icon: (
-      <Image
-        src={iconMap["sales-velocity"]}
-        alt="Sales Velocity"
-        width={32}
-        height={32}
-      />
-    ),
-    label: "Sales Velocity",
-  },
-  {
-    key: "competitive-benchmark",
-    icon: (
-      <Image
-        src={iconMap["competitive-benchmark"]}
-        alt="Competitive Benchmark"
-        width={32}
-        height={32}
-      />
-    ),
-    label: "Competitive Benchmark",
-  },
-  {
-    key: "settings",
-    icon: (
-      <Image src={iconMap["settings"]} alt="Settings" width={32} height={32} />
-    ),
-    label: "Settings",
-  },
-];
+import { sidebarMenuItems } from "../../utils/sidebarMenuItems";
 
 const Sidebar = () => {
-  const [activeKey, setActiveKey] = useState(menuItems[0].key);
+  const [activeKey, setActiveKey] = useState(sidebarMenuItems[0].key);
 
   return (
     <aside
@@ -169,7 +52,7 @@ const Sidebar = () => {
           gap: "22px",
         }}
       >
-        {menuItems.map((item) => {
+        {sidebarMenuItems.map((item) => {
           const isActive = item.key === activeKey;
           return (
             <div
@@ -197,7 +80,6 @@ const Sidebar = () => {
                   filter: isActive
                     ? "invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(200%)"
                     : "invert(32%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%)",
-                  transition: "filter 0.2s",
                 }}
               />
               <span
