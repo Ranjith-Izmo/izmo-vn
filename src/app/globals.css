@@ -78,23 +78,6 @@ a {
   }
 }
 
-.custom-add-import-btn {
-  background: transparent;
-  color: #555555;
-}
-.custom-add-import-btn:hover {
-  background: #000000;
-  color: #fff;
-}
-.custom-export-btn {
-  background: #000000;
-  color: #fff;
-}
-.custom-export-btn:hover {
-  background: #E53935;
-  color: #fff;
-}
-
 .ant-dropdown-menu {
   margin-top: -4px !important;
   border-radius: 1px solid !important;

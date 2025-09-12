@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { sidebarMenuItems } from "../../utils/sidebarMenuItems";
 import { usePathname, useRouter } from "next/navigation";
+import { sidebarMenuItems } from "@/app/utils/sidebarMenuItems";
 
 const Sidebar = () => {
   const pathname = usePathname();

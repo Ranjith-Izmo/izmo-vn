@@ -1,0 +1,102 @@
+.header {
+  width: calc(100% - 336px);
+  position: relative;
+  top: 0;
+  background: #fafbfc;
+  left: 336px;
+  right: 0;
+  z-index: 150;
+  flex-direction: column;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.headerTop {
+  height: 138px;
+  background: var(--color-header-bg);
+  color: var(--color-header-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E3E3E3;
+  padding: 0 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.headerTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headerTitleText {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+.headerDropdownRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerDropdowns {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 2rem;
+}
+
+.headerActions {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 2rem;
+}
+
+.customAddImportBtn {
+  border: 1px solid #444444;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 16px 22px;
+  line-height: 26px;
+  font-family: Inter;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+   background: transparent;
+  color: #555555;
+}
+
+.customAddImportBtn:hover {
+  background: #000000;
+  color: #fff;
+}
+
+.customExportBtn {
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 16px 22px;
+  font-family: Inter;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+  background: #000000;
+  color: #fff;
+}
+
+.customExportBtn:hover {
+  background: #E53935;
+  color: #fff;
+}
+
