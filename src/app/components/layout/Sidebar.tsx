@@ -1,10 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { sidebarMenuItems } from "../../utils/sidebarMenuItems";
+import { usePathname, useRouter } from "next/navigation";
 
 const Sidebar = () => {
-  const [activeKey, setActiveKey] = useState(sidebarMenuItems[0].key);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const normalizedPath = pathname.toLowerCase();
 
   return (
     <aside
@@ -53,11 +57,13 @@ const Sidebar = () => {
         }}
       >
         {sidebarMenuItems.map((item) => {
-          const isActive = item.key === activeKey;
+          // Normalize item path for matching
+          const itemPath = item.path ? item.path.toLowerCase() : "/";
+          const isActive = normalizedPath === itemPath;
           return (
             <div
               key={item.key}
-              onClick={() => setActiveKey(item.key)}
+              onClick={() => router.push(item.path || "/")}
               style={{
                 display: "flex",
                 gap: "20px",

@@ -24,6 +24,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Dashboard",
+    path: "/",
   },
   {
     key: "inventory",
@@ -36,6 +37,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Inventory",
+    path: "/Inventory",
   },
   {
     key: "market-analytics",
@@ -48,6 +50,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Market Analytics",
+    path: "/MarketAnalytics",
   },
   {
     key: "demand-map",
@@ -60,6 +63,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Demand Map",
+    path: "/DemandMap",
   },
   {
     key: "demand-analysis",
@@ -72,6 +76,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Demand Analysis",
+    path: "/DemandAnalysis",
   },
   {
     key: "pricing-intelligence",
@@ -84,6 +89,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Pricing Intelligence",
+    path: "/PricingIntelligence",
   },
   {
     key: "sales-velocity",
@@ -96,6 +102,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Sales Velocity",
+    path: "/SalesVelocity",
   },
   {
     key: "competitive-benchmark",
@@ -108,6 +115,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Competitive Benchmark",
+    path: "/CompetitiveBenchmark",
   },
   {
     key: "settings",
@@ -115,5 +123,6 @@ export const sidebarMenuItems = [
       <Image src={iconMap["settings"]} alt="Settings" width={32} height={32} />
     ),
     label: "Settings",
+    path: "/Settings",
   },
 ];

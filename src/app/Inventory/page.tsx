@@ -1,8 +1,9 @@
 import React from 'react'
+import Inventory from './components'
 
 const Page = () => {
   return (
-    <div>Page</div>
+    <Inventory />
   )
 }
 
