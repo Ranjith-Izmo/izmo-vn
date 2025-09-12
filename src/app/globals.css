@@ -1,3 +1,29 @@
+/* Import Inter font globally */
+@import '@fontsource/inter/index.css';
+
+/* Global color variables based on dashboard UI */
+:root {
+  --color-sidebar-bg: #fff;
+  --color-sidebar-border: #eee;
+  --color-sidebar-active-bg: #f44336;
+  --color-sidebar-active-text: #fff;
+  --color-sidebar-icon: #757575;
+  --color-header-bg: #fff;
+  --color-header-text: #222;
+  --color-content-bg: #fafbfc;
+  --color-content-card-bg: #fff;
+  --color-content-border: #e5e7eb;
+  --color-content-title: #222;
+  --color-content-subtitle: #757575;
+  --color-success: #1db954;
+  --color-danger: #f44336;
+  --color-warning: #ff9800;
+  --color-info: #2196f3;
+}
+
+body {
+  font-family: 'Inter Variable', 'Inter';
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;

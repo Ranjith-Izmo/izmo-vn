@@ -6,7 +6,7 @@ const Content = ({ children }: { children?: React.ReactNode }) => {
       style={{
         flex: 1,
         height: '100%',
-        background: '#fff',
+        background: 'var(--color-content-bg)',
         padding: '2rem',
         overflowY: 'auto',
       }}
