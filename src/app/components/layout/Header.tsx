@@ -11,7 +11,6 @@ import {
   searchRadiusItems,
   previousDaysItems,
 } from "../../utils/menuItems";
-import path from "path";
 
 const Header = () => {
   const pathname = usePathname();
