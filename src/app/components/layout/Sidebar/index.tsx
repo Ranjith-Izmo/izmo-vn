@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { sidebarMenuItems } from "@/app/utils/sidebarMenuItems";
+import styles from "./Sidebar.module.css";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -11,35 +12,8 @@ const Sidebar = () => {
   const normalizedPath = pathname.toLowerCase();
 
   return (
-    <aside
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "336px",
-        height: "100vh",
-        background: "var(--color-sidebar-bg)",
-        borderRight: "1px solid #E3E3E3",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "start",
-        boxShadow: "2px 0 8px rgba(0,0,0,0.03)",
-        zIndex: 200,
-        paddingRight: "20px",
-        paddingLeft: "20px",
-      }}
-    >
-      <div
-        style={{
-          width: "100%",
-          paddingTop: "40px",
-          paddingBottom: "70px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+    <aside className={styles.sidebar}>
+      <div className={styles.sidebarLogo}>
         <Image
           src="/images/izmoVN_logo.svg"
           alt="Logo"
@@ -48,56 +22,31 @@ const Sidebar = () => {
           height={66}
         />
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "100%",
-          gap: "22px",
-        }}
-      >
+      <div className={styles.sidebarMenu}>
         {sidebarMenuItems.map((item) => {
-          // Normalize item path for matching
           const itemPath = item.path ? item.path.toLowerCase() : "/";
           const isActive = normalizedPath === itemPath;
           return (
             <div
               key={item.key}
               onClick={() => router.push(item.path || "/")}
-              style={{
-                display: "flex",
-                gap: "20px",
-                paddingBottom: "22px",
-                justifyContent: "start",
-                alignItems: "center",
-                cursor: "pointer",
-                background: isActive ? "#E53935" : "transparent",
-                borderRadius: isActive ? "8px" : "0",
-                padding: "8px 12px",
-                color: isActive ? "#FFFFFF" : "#555555",
-              }}
+              className={`${styles.menuItem} ${
+                isActive ? styles.menuItemActive : ""
+              }`}
             >
               <Image
                 src={item.icon.props.src}
                 alt={item.icon.props.alt}
                 width={32}
                 height={32}
+                className={styles.menuItemIcon}
                 style={{
                   filter: isActive
                     ? "invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(200%)"
                     : "invert(32%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%)",
                 }}
               />
-              <span
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "26px",
-                  fontWeight: 400,
-                  fontFamily: "inter",
-                }}
-              >
-                {item.label}
-              </span>
+              <span className={styles.menuItemLabel}>{item.label}</span>
             </div>
           );
         })}
