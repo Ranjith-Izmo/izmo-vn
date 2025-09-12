@@ -15,6 +15,9 @@ import {
 
 const Header = () => {
   const pathname = usePathname();
+  const [pageTitle, setPageTitle] = useState("Dashboard");
+  const [mounted, setMounted] = useState(false);
+
   const getTitle = (path: string) => {
     const customTitles: Record<string, string> = {
       "/": "Dashboard",
@@ -27,11 +30,13 @@ const Header = () => {
       "/competitivebenchmark": "Competitive Benchmark",
       "/settings": "Settings",
     };
+
     const normalized = path.toLowerCase();
     // Try exact match first
     if (customTitles[normalized]) {
       return customTitles[normalized];
     }
+
     // Try matching by last segment
     const segments = normalized.split("/").filter(Boolean);
     if (segments.length > 0) {
@@ -40,12 +45,7 @@ const Header = () => {
         return customTitles[last];
       }
     }
-    // Try matching by key (for e.g. /inventory-management)
-    for (const key in customTitles) {
-      if (normalized.endsWith(key)) {
-        return customTitles[key];
-      }
-    }
+
     // Fallback: prettify last segment
     if (segments.length === 0) return "Dashboard";
     return segments
@@ -54,8 +54,7 @@ const Header = () => {
       )
       .join(" / ");
   };
-  const [pageTitle, setPageTitle] = useState("Dashboard");
-  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
     setPageTitle(getTitle(pathname));
@@ -69,19 +68,11 @@ const Header = () => {
             {mounted ? pageTitle : "Dashboard"}
           </span>
         </div>
-        <CustomDropdown
-          name="Group / Dealers"
-          items={dealerItems}
-          bg="#fff"
-        />
+        <CustomDropdown name="Group / Dealers" items={dealerItems} bg="#fff" />
       </div>
       <div className={styles.headerDropdownRow}>
         <div className={styles.headerDropdowns}>
-          <CustomDropdown
-            name="All Makes"
-            items={makeitems}
-            bg="transparent"
-          />
+          <CustomDropdown name="All Makes" items={makeitems} bg="transparent" />
           <CustomDropdown
             name="All Models"
             items={modelItems}
@@ -89,12 +80,12 @@ const Header = () => {
           />
           {(pathname?.toLowerCase() === "/marketanalytics" ||
             pathname?.toLowerCase() === "/competitivebenchmark") && (
-              <CustomDropdown
-                name="Search Radius : 50k"
-                items={searchRadiusItems}
-                bg="transparent"
-              />
-            )}
+            <CustomDropdown
+              name="Search Radius : 50k"
+              items={searchRadiusItems}
+              bg="transparent"
+            />
+          )}
           {pathname?.toLowerCase() === "/competitivebenchmark" && (
             <CustomDropdown
               name="Last 30 days"
@@ -105,9 +96,7 @@ const Header = () => {
         </div>
         <div className={styles.headerActions}>
           {pathname?.toLowerCase() === "/inventory" && (
-            <button className={styles.customAddImportBtn}>
-              Add / Import
-            </button>
+            <button className={styles.customAddImportBtn}>Add / Import</button>
           )}
           <button className={styles.customExportBtn}>
             Export
