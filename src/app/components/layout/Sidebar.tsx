@@ -132,7 +132,7 @@ const Sidebar = () => {
         width: "336px",
         height: "100vh",
         background: "var(--color-sidebar-bg)",
-        borderRight: "1px solid var(--color-sidebar-border)",
+        borderRight: "1px solid #E3E3E3",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -156,6 +156,7 @@ const Sidebar = () => {
         <Image
           src="/images/izmoVN_logo.svg"
           alt="Logo"
+          priority
           width={200}
           height={66}
         />
