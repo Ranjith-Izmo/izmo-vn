@@ -42,7 +42,7 @@ const CustomCard = () => {
               fontWeight: 500,
               fontSize: "22px",
               lineHeight: "26px",
-              color: "#101828",
+              color: "#000000",
               marginBottom: "8px",
             }}
           >
