@@ -72,27 +72,44 @@ const Header = () => {
       </div>
       <div className={styles.headerDropdownRow}>
         <div className={styles.headerDropdowns}>
-          <CustomDropdown name="All Makes" items={makeitems} bg="transparent" />
-          <CustomDropdown
-            name="All Models"
-            items={modelItems}
-            bg="transparent"
-          />
-          {(pathname?.toLowerCase() === "/marketanalytics" ||
-            pathname?.toLowerCase() === "/competitivebenchmark") && (
-            <CustomDropdown
-              name="Search Radius : 50k"
-              items={searchRadiusItems}
-              bg="transparent"
-            />
-          )}
-          {pathname?.toLowerCase() === "/competitivebenchmark" && (
-            <CustomDropdown
-              name="Last 30 days"
-              items={previousDaysItems}
-              bg="transparent"
-            />
-          )}
+          {(() => {
+            const excluded = [
+              "/demandmap",
+              "/demandanalysis",
+              "/pricingintelligence",
+              "/salesvelocity"
+            ];
+            const current = pathname?.toLowerCase();
+            if (!excluded.includes(current)) {
+              return <>
+                <CustomDropdown
+                  name="All Makes"
+                  items={makeitems}
+                  bg="transparent"
+                />
+                <CustomDropdown
+                  name="All Models"
+                  items={modelItems}
+                  bg="transparent"
+                />
+                {(current === "/marketanalytics" || current === "/competitivebenchmark") && (
+                  <CustomDropdown
+                    name="Search Radius : 50k"
+                    items={searchRadiusItems}
+                    bg="transparent"
+                  />
+                )}
+                {current === "/competitivebenchmark" && (
+                  <CustomDropdown
+                    name="Last 30 days"
+                    items={previousDaysItems}
+                    bg="transparent"
+                  />
+                )}
+              </>;
+            }
+            return null;
+          })()}
         </div>
         <div className={styles.headerActions}>
           {pathname?.toLowerCase() === "/inventory" && (
