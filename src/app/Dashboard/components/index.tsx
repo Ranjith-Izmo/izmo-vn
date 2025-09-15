@@ -35,6 +35,8 @@ const Dashboard = () => {
           trendText="from previous week"
           trendDirection="down"
           trendColor="#F04438"
+          iconColor="#E3A7B5"
+
         />
         <CustomCard
           title="Avg Days in Stock"
@@ -46,6 +48,7 @@ const Dashboard = () => {
           trendText="days from last month"
           trendDirection="down"
           trendColor="#F04438"
+          iconColor="#E3A7B5"
         />
       </div>
     </div>
