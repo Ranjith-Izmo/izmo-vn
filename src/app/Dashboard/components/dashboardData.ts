@@ -14,7 +14,7 @@ export const demandInventoryData = [
 export const dayInStockData = [
   { range: "0-15", value: 40 },
   { range: "16-30", value: 80 },
-  { range: "31-40", value: 30 },
+  { range: "31-40", value: 200 },
   { range: "46-60", value: 20 },
   { range: "60+", value: 10 },
 ];

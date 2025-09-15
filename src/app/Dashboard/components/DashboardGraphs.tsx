@@ -5,7 +5,6 @@ import {
   Bar,
   XAxis,
   YAxis,
-  Tooltip,
   ResponsiveContainer,
   CartesianGrid,
 } from "recharts";
@@ -138,7 +137,6 @@ const DashboardGraphs: React.FC = () => {
                 fontWeight: 700,
                 fill: "#565656",
                 whiteSpace: "nowrap",
-
                 lineHeight: "15.07px",
               }}
             />
@@ -186,6 +184,9 @@ const DashboardGraphs: React.FC = () => {
           gap: "20px",
           boxShadow: "0px 1px 2px 0px #1018280D",
           border: "1px solid #DDDDDD80",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
         }}
       >
         <Typography
@@ -201,6 +202,7 @@ const DashboardGraphs: React.FC = () => {
         >
           Day In Stock Distribution
         </Typography>
+        <div style={{ flexGrow: 1 }} />
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={dayInStockData} margin={{ left: 20, right: 20 }}>
             <CartesianGrid
@@ -211,13 +213,12 @@ const DashboardGraphs: React.FC = () => {
             <XAxis
               dataKey="range"
               style={{
-                fill: "#8884d8",
+                fill: "#565656",
                 fontFamily: "Inter",
                 fontWeight: 400,
                 fontStyle: "Regular",
                 fontSize: "18px",
-                lineHeight: "100%",
-                color: "#565656",
+                lineHeight: "120%",
               }}
             />
             <Bar
