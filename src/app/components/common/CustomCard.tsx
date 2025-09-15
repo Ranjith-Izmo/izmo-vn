@@ -7,8 +7,8 @@ interface CustomCardProps {
   title: string;
   value: string | number;
   unit?: string;
-  icon: string; 
-  trendIcon?: string; 
+  icon: string;
+  trendIcon?: string;
   trendValue?: string;
   trendText?: string;
   trendColor?: string;
@@ -33,28 +33,32 @@ const CustomCard: React.FC<CustomCardProps> = ({
   trendDirection,
 }) => {
   return (
-    <Card
-      className={styles["custom-card"]}
-      bodyStyle={{ padding: 0 }}
-    >
+    <Card className={styles["custom-card"]} styles={{ body: { padding: 0 } }}>
       <div className={styles["custom-card-content"]}>
         {/* Heading and icon row */}
         <div className={styles["custom-card-header"]}>
           <span className={styles["custom-card-title"]}>{title}</span>
-          <div className={styles["custom-card-icon"]} style={iconColor ? { borderColor: iconColor } : {}}>
-            <Image
-              src={icon}
-              alt="Card Icon"
-              width={32}
-              height={32}
-            />
+          <div
+            className={styles["custom-card-icon"]}
+            style={iconColor ? { borderColor: iconColor } : {}}
+          >
+            <Image src={icon} alt="Card Icon" width={32} height={32} />
           </div>
         </div>
         {/* Value and subtitle row */}
         <div className={styles["custom-card-value-row"]}>
-          <span className={styles["custom-card-value"]} style={valueColor ? { color: valueColor } : {}}>{value}</span>
-          {unit && <span className={styles["custom-card-subtitle"]}>{unit}</span>}
-          {subtitle && <span className={styles["custom-card-subtitle"]}>{subtitle}</span>}
+          <span
+            className={styles["custom-card-value"]}
+            style={valueColor ? { color: valueColor } : {}}
+          >
+            {value}
+          </span>
+          {unit && (
+            <span className={styles["custom-card-subtitle"]}>{unit}</span>
+          )}
+          {subtitle && (
+            <span className={styles["custom-card-subtitle"]}>{subtitle}</span>
+          )}
         </div>
         {/* Trend row */}
         {(trendIcon || trendValue || trendText) && (
@@ -65,13 +69,21 @@ const CustomCard: React.FC<CustomCardProps> = ({
             {trendValue && (
               <span
                 className={styles["custom-card-trend-up"]}
-                style={trendColor ? { color: trendColor } : trendDirection === "down" ? { color: "#F04438" } : { color: "#2E896E" }}
+                style={
+                  trendColor
+                    ? { color: trendColor }
+                    : trendDirection === "down"
+                    ? { color: "#F04438" }
+                    : { color: "#2E896E" }
+                }
               >
                 {trendValue}
               </span>
             )}
             {trendText && (
-              <span className={styles["custom-card-trend-desc"]}>{trendText}</span>
+              <span className={styles["custom-card-trend-desc"]}>
+                {trendText}
+              </span>
             )}
           </div>
         )}
@@ -81,4 +93,3 @@ const CustomCard: React.FC<CustomCardProps> = ({
 };
 
 export default CustomCard;
-
