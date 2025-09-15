@@ -3,6 +3,7 @@ import React from "react";
 import { Typography } from "antd";
 import CustomCard from "../../components/common/CustomCard";
 import CustomRecommendationCard from "../../components/common/CustomRecommendationCard";
+import DashboardGraphs from "./DashboardGraphs";
 
 const Dashboard = () => {
   const { Title } = Typography;
@@ -105,6 +106,8 @@ const Dashboard = () => {
           description="Consider transferring 3 Citroën C3 units to Store B where turn rate is 25% higher."
         />
       </div>
+      {/* <DashboardGraphs /> */}
+      <DashboardGraphs />
     </div>
   );
 };
