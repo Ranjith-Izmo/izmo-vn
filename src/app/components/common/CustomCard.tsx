@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "antd";
 import Image from "next/image";
-import styles from "./Customcard.module.css";
+import styles from "../styles/Customcard.module.css";
 
 interface CustomCardProps {
   title: string;
@@ -15,7 +15,6 @@ interface CustomCardProps {
   subtitle?: string;
   iconColor?: string;
   valueColor?: string;
-  trendDirection?: "up" | "down";
 }
 
 const CustomCard: React.FC<CustomCardProps> = ({
@@ -30,7 +29,6 @@ const CustomCard: React.FC<CustomCardProps> = ({
   subtitle,
   iconColor,
   valueColor,
-  trendDirection,
 }) => {
   return (
     <Card className={styles["custom-card"]} styles={{ body: { padding: 0 } }}>
@@ -72,8 +70,6 @@ const CustomCard: React.FC<CustomCardProps> = ({
                 style={
                   trendColor
                     ? { color: trendColor }
-                    : trendDirection === "down"
-                    ? { color: "#F04438" }
                     : { color: "#2E896E" }
                 }
               >

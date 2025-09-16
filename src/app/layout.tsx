@@ -4,8 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ConfigProvider } from "antd";
 import "antd/dist/reset.css";
-import Header from "./components/layout/Header";
-import Sidebar from "./components/layout/Sidebar";
+import Sidebar from "./Layout/Sidebar";
+import Header from "./Layout/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

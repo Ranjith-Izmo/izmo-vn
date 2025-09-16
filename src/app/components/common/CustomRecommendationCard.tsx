@@ -1,6 +1,6 @@
 
 import React from "react";
-import styles from "./CustomRecommendationCard.module.css";
+import styles from "../styles/CustomRecommendationCard.module.css";
 import Image from "next/image";
 
 interface CustomRecommendationCardProps {

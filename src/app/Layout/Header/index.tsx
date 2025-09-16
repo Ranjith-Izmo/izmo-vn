@@ -2,7 +2,6 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import CustomDropdown from "../../common/CustomDropdown";
 import styles from "./Header.module.css";
 import Image from "next/image";
 import {
@@ -11,7 +10,8 @@ import {
   modelItems,
   searchRadiusItems,
   previousDaysItems,
-} from "../../../utils/menuItems";
+} from "../../utils/menuItems";
+import CustomDropdown from "../../components/common/CustomDropdown";
 
 const Header = () => {
   const pathname = usePathname();
