@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "antd";
 import Image from "next/image";
-import styles from "../styles/Customcard.module.css";
+import styles from "../styles/customcard.module.css";
 
 interface CustomCardProps {
   title: string;

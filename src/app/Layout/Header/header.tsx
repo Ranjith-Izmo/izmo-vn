@@ -2,7 +2,7 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import styles from "../../../styles/Header.module.css";
+import styles from "../../../styles/header.module.css";
 import Image from "next/image";
 import {
   dealerItems,
@@ -11,7 +11,7 @@ import {
   searchRadiusItems,
   previousDaysItems,
 } from "../../../utils/menuItems";
-import CustomDropdown from "../../../components/CustomDropdown";
+import CustomDropdown from "../../../components/customDropdown";
 
 const Header = () => {
   const pathname = usePathname();
@@ -21,13 +21,13 @@ const Header = () => {
   const getTitle = (path: string) => {
     const customTitles: Record<string, string> = {
       "/": "Dashboard",
-      "/inventory": "Inventory Management",
-      "/marketanalytics": "Market Analytics",
-      "/demandmap": "Demand Map",
-      "/demandanalysis": "Demand Analysis",
-      "/pricingintelligence": "Pricing Intelligence",
-      "/salesvelocity": "Sales Velocity",
-      "/competitivebenchmark": "Competitive Benchmark",
+      "/inventory-management": "Inventory Management",
+      "/market-analytics": "Market Analytics",
+      "/demand-map": "Demand Map",
+      "/demand-analysis": "Demand Analysis",
+      "/pricing-intelligence": "Pricing Intelligence",
+      "/sales-velocity": "Sales Velocity",
+      "/competitive-benchmark": "Competitive Benchmark",
       "/settings": "Settings",
     };
 
@@ -74,10 +74,10 @@ const Header = () => {
         <div className={styles.headerDropdowns}>
           {(() => {
             const excluded = [
-              "/demandmap",
-              "/demandanalysis",
-              "/pricingintelligence",
-              "/salesvelocity"
+              "/demand-map",
+              "/demand-analysis",
+              "/pricing-intelligence",
+              "/sales-velocity"
             ];
             const current = pathname?.toLowerCase();
             if (!excluded.includes(current)) {
@@ -92,14 +92,14 @@ const Header = () => {
                   items={modelItems}
                   bg="transparent"
                 />
-                {(current === "/marketanalytics" || current === "/competitivebenchmark") && (
+                {(current === "/market-analytics" || current === "/competitive-benchmark") && (
                   <CustomDropdown
                     name="Search Radius : 50k"
                     items={searchRadiusItems}
                     bg="transparent"
                   />
                 )}
-                {current === "/competitivebenchmark" && (
+                {current === "/competitive-benchmark" && (
                   <CustomDropdown
                     name="Last 30 days"
                     items={previousDaysItems}
@@ -112,7 +112,7 @@ const Header = () => {
           })()}
         </div>
         <div className={styles.headerActions}>
-          {pathname?.toLowerCase() === "/inventory" && (
+          {pathname?.toLowerCase() === "/inventory-management" && (
             <button className={styles.customAddImportBtn}>Add / Import</button>
           )}
           <button className={styles.customExportBtn}>
