@@ -1,6 +1,6 @@
 import React from "react";
 
-const Inventory = () => {
+const InventoryManagement = () => {
   return (
     <div
       style={{
@@ -30,4 +30,4 @@ const Inventory = () => {
   );
 };
 
-export default Inventory;
+export default InventoryManagement;

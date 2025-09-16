@@ -1,5 +1,5 @@
 import React from 'react'
-import PricingIntelligence from './components'
+import PricingIntelligence from './components/pricingIntelligence'
 
 const Page = () => {
   return (

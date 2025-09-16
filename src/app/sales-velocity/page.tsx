@@ -1,5 +1,5 @@
 import React from 'react'
-import SalesVelocity from './components'
+import SalesVelocity from './components/salesVelocity'
 
 const Page = () => {
   return (

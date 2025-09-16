@@ -1,15 +1,15 @@
 import Image from "next/image";
 
 export const iconMap: Record<string, string> = {
-  dashboard: "/sidebarIcons/dashboard.svg",
-  inventory: "/sidebarIcons/Inventory.svg",
+  "dashboard": "/sidebarIcons/dashboard.svg",
+  "inventory-management": "/sidebarIcons/Inventory.svg",
   "market-analytics": "/sidebarIcons/market-analytics.svg",
   "demand-map": "/sidebarIcons/demand-map.svg",
   "demand-analysis": "/sidebarIcons/demand-analysis.svg",
   "pricing-intelligence": "/sidebarIcons/pricing-intelligence.svg",
   "sales-velocity": "/sidebarIcons/sales-velocity.svg",
   "competitive-benchmark": "/sidebarIcons/Competitive.svg",
-  settings: "/sidebarIcons/settings.svg",
+  "settings": "/sidebarIcons/settings.svg",
 };
 
 export const sidebarMenuItems = [
@@ -27,17 +27,17 @@ export const sidebarMenuItems = [
     path: "/",
   },
   {
-    key: "inventory",
+    key: "inventory-management",
     icon: (
       <Image
-        src={iconMap["inventory"]}
+        src={iconMap["inventory-management"]}
         alt="Inventory"
         width={32}
         height={32}
       />
     ),
     label: "Inventory",
-    path: "/Inventory",
+    path: "/inventory-management",
   },
   {
     key: "market-analytics",
@@ -50,7 +50,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Market Analytics",
-    path: "/MarketAnalytics",
+    path: "/market-analytics",
   },
   {
     key: "demand-map",
@@ -63,7 +63,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Demand Map",
-    path: "/DemandMap",
+    path: "/demand-map",
   },
   {
     key: "demand-analysis",
@@ -76,7 +76,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Demand Analysis",
-    path: "/DemandAnalysis",
+    path: "/demand-analysis",
   },
   {
     key: "pricing-intelligence",
@@ -89,7 +89,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Pricing Intelligence",
-    path: "/PricingIntelligence",
+    path: "/pricing-intelligence",
   },
   {
     key: "sales-velocity",
@@ -102,7 +102,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Sales Velocity",
-    path: "/SalesVelocity",
+    path: "/sales-velocity",
   },
   {
     key: "competitive-benchmark",
@@ -115,7 +115,7 @@ export const sidebarMenuItems = [
       />
     ),
     label: "Competitive Benchmark",
-    path: "/CompetitiveBenchmark",
+    path: "/competitive-benchmark",
   },
   {
     key: "settings",
@@ -123,6 +123,6 @@ export const sidebarMenuItems = [
       <Image src={iconMap["settings"]} alt="Settings" width={32} height={32} />
     ),
     label: "Settings",
-    path: "/Settings",
+    path: "/settings",
   },
 ];

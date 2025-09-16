@@ -1,10 +1,10 @@
 import React from 'react'
-import Inventory from './components'
+import InventoryManagement from './components/inventoryManagement'
 
 const Page = () => {
   return (
-    <Inventory />
+    <InventoryManagement />
   )
 }
 
-export default Page
+export default Page 

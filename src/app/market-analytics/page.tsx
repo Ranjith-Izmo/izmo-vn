@@ -1,5 +1,5 @@
 import React from 'react'
-import MarketAnalytics from './components'
+import MarketAnalytics from './components/marketAnalytics'
 
 const Page = () => {
   return (

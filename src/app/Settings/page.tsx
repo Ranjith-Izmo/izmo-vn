@@ -1,5 +1,5 @@
 import React from 'react'
-import Settings from './components'
+import Settings from './components/settings'
 
 const Page = () => {
   return (
