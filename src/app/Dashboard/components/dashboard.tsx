@@ -1,17 +1,17 @@
 "use client";
 import React from "react";
 import { Typography } from "antd";
-import CustomCard from "../../components/common/CustomCard";
-import CustomRecommendationCard from "../../components/common/CustomRecommendationCard";
+import CustomCard from "../../../components/CustomCard";
+import CustomRecommendationCard from "../../../components/CustomRecommendationCard";
+import { dashboardCardsData, dashboardRecommendationsData } from "../../../utils/dashboardData";
 import DashboardGraphs from "./DashboardGraphs";
-import { dashboardCardsData, dashboardRecommendationsData } from "../../utils/dashboardData";
 
 const Dashboard = () => {
   const { Title } = Typography;
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
-      
+
       {/* Header Section */}
       <div
         style={{

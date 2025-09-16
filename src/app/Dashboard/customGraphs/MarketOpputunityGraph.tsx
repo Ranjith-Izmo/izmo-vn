@@ -1,7 +1,7 @@
 import { Typography } from 'antd'
 import React from 'react'
 import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, XAxis, YAxis } from 'recharts'
-import { marketOpportunityData } from '../../utils/dashboardData'
+import { marketOpportunityData } from '../../../utils/dashboardData'
 
 const MarketOpputunityGraph = () => {
   return (

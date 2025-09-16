@@ -1,5 +1,5 @@
 import React from 'react'
-import { salesVelocityData } from '../../utils/dashboardData'
+import { salesVelocityData } from '../../../utils/dashboardData'
 import { Typography } from 'antd'
 
 const SalesVelocityTable = () => {

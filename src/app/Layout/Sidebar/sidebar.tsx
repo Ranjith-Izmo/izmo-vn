@@ -2,8 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { sidebarMenuItems } from "@/app/utils/sidebarMenuItems";
-import styles from "./Sidebar.module.css";
+import { sidebarMenuItems } from "@/utils/sidebarMenuItems";
+import styles from "../../../styles/Sidebar.module.css";
+
 
 const Sidebar = () => {
   const pathname = usePathname();
