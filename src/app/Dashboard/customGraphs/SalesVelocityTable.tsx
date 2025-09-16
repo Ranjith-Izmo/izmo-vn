@@ -1,6 +1,6 @@
-import React from 'react'
-import { salesVelocityData } from '../../../utils/dashboardData'
-import { Typography } from 'antd'
+import React from "react";
+import { salesVelocityData } from "../../../utils/dashboardData";
+import { Typography } from "antd";
 
 const SalesVelocityTable = () => {
     return (
@@ -38,30 +38,44 @@ const SalesVelocityTable = () => {
                 <table
                     style={{
                         width: "100%",
-                        borderCollapse: "collapse",
+                        borderCollapse: "separate",
+                        borderSpacing: "0 12px",
                         fontFamily: "Inter",
                         fontSize: "16px",
                     }}
                 >
                     <thead>
-                        <tr style={{ background: "#F5F6FA" }}>
-                            <th
-                                style={{ padding: "8px", textAlign: "left", color: "#333" }}
-                            >
+                        <tr
+                            style={{
+                                height: "58px",
+                                background: "#EEEFFF",
+                                borderRadius: "8px",
+                                paddingRight: "30px",
+                                textAlign: "left",
+                                color: "#000000",
+                                fontFamily: "Inter",
+                                fontWeight: 600,
+                                fontStyle: "Semi Bold",
+                                fontSize: "20px",
+                                lineHeight: "28px",
+                            }}
+                        >
+                            <th style={{ width: "143px", padding: "8px", textAlign: "left" }}>
                                 Model
                             </th>
-                            <th
-                                style={{ padding: "8px", textAlign: "left", color: "#333" }}
-                            >
+                            <th style={{ width: "143px", padding: "8px", textAlign: "left" }}>
                                 Turn Rate
                             </th>
-                            <th
-                                style={{ padding: "8px", textAlign: "left", color: "#333" }}
-                            >
+                            <th style={{ width: "212px", padding: "8px", textAlign: "left" }}>
                                 Avg Days in Stock
                             </th>
                             <th
-                                style={{ padding: "8px", textAlign: "left", color: "#333" }}
+                                style={{
+                                    width: "143px",
+                                    padding: "8px",
+                                    textAlign: "end",
+                                    paddingRight: "20px",
+                                }}
                             >
                                 Status
                             </th>
@@ -71,53 +85,160 @@ const SalesVelocityTable = () => {
                         {salesVelocityData.map((row) => (
                             <tr
                                 key={row.model}
-                                style={{ borderBottom: "1px solid #F0F0F0" }}
+                                style={{
+                                    backgroundColor: "#FAFAFA",
+                                    marginBottom: "12px",
+                                    borderRadius: "8px",
+                                    display: "table-row",
+                                }}
                             >
-                                <td style={{ padding: "8px" }}>{row.model}</td>
-                                <td style={{ padding: "8px" }}>{row.turnRate}</td>
-                                <td style={{ padding: "8px" }}>{row.avgDays}</td>
-                                <td style={{ padding: "8px" }}>
+                                <td
+                                    style={{
+                                        borderRadius: "4px",
+                                        textAlign: "left",
+                                        height: "58px",
+                                        backgroundColor: "#FAFAFA",
+                                        padding: "8px",
+                                    }}
+                                >
+                                    {row.model}
+                                </td>
+                                <td
+                                    style={{
+                                        borderRadius: "4px",
+                                        textAlign: "center",
+                                        color: "#727272",
+                                        height: "58px",
+                                        backgroundColor: "#FAFAFA",
+                                        padding: "8px",
+                                    }}
+                                >
+                                    {row.turnRate}
+                                </td>
+                                <td
+                                    style={{
+                                        borderRadius: "4px",
+                                        color: "#727272",
+                                        textAlign: "center",
+                                        height: "58px",
+                                        backgroundColor: "#FAFAFA",
+                                        padding: "8px",
+                                    }}
+                                >
+                                    {row.avgDays}
+                                </td>
+                                <td
+                                    style={{
+                                        borderRadius: "4px",
+                                        display: "flex",
+                                        justifyContent: "end",
+                                        alignItems: "center",
+                                        height: "58px",
+                                        backgroundColor: "#FAFAFA",
+                                        padding: "8px",
+                                    }}
+                                >
                                     {row.status === "Fast Moving" && (
-                                        <span
+                                        <div
                                             style={{
-                                                background: "#E6F9F0",
-                                                color: "#12B76A",
+                                                display: "flex",
+                                                gap: "8px",
+                                                alignItems: "center",
+                                                justifyContent: "end",
+                                                background: "#ffffff",
+                                                color: "#259800",
                                                 padding: "4px 12px",
-                                                borderRadius: "16px",
-                                                fontWeight: 600,
-                                                fontSize: "14px",
+                                                borderRadius: "40px",
+                                                border: "1px solid #259800",
+                                                width: "fit-content",
                                             }}
                                         >
-                                            ● Fast Moving
-                                        </span>
+                                            <div
+                                                style={{
+                                                    width: "8.52px",
+                                                    height: "8.52px",
+                                                    backgroundColor: "#259800",
+                                                    borderRadius: "100%",
+                                                }}
+                                            ></div>
+                                            <span
+                                                style={{
+                                                    fontWeight: 400,
+                                                    fontSize: "16px",
+                                                    lineHeight: "24px",
+                                                }}
+                                            >
+                                                Fast Moving
+                                            </span>
+                                        </div>
                                     )}
                                     {row.status === "Average" && (
-                                        <span
+                                        <div
                                             style={{
-                                                background: "#FFF7E6",
-                                                color: "#FF9800",
+                                                display: "flex",
+                                                gap: "8px",
+                                                alignItems: "center",
+                                                justifyContent: "end",
+                                                background: "#ffffff",
+                                                color: "#F2B005",
                                                 padding: "4px 12px",
-                                                borderRadius: "16px",
-                                                fontWeight: 600,
-                                                fontSize: "14px",
+                                                borderRadius: "40px",
+                                                border: "1px solid #F2B005",
+                                                width: "fit-content",
                                             }}
                                         >
-                                            ● Average
-                                        </span>
+                                            <div
+                                                style={{
+                                                    width: "8.52px",
+                                                    height: "8.52px",
+                                                    backgroundColor: "#F2B005",
+                                                    borderRadius: "100%",
+                                                }}
+                                            ></div>
+                                            <span
+                                                style={{
+                                                    fontWeight: 400,
+                                                    fontSize: "16px",
+                                                    lineHeight: "24px",
+                                                }}
+                                            >
+                                                Average
+                                            </span>
+                                        </div>
                                     )}
                                     {row.status === "Slow Moving" && (
-                                        <span
+                                        <div
                                             style={{
-                                                background: "#FFE6E6",
-                                                color: "#F04438",
+                                                display: "flex",
+                                                gap: "8px",
+                                                alignItems: "center",
+                                                justifyContent: "end",
+                                                background: "#ffffff",
+                                                color: "#C32026",
                                                 padding: "4px 12px",
-                                                borderRadius: "16px",
-                                                fontWeight: 600,
-                                                fontSize: "14px",
+                                                borderRadius: "40px",
+                                                border: "1px solid #C32026",
+                                                width: "fit-content",
                                             }}
                                         >
-                                            ● Slow Moving
-                                        </span>
+                                            <div
+                                                style={{
+                                                    width: "8.52px",
+                                                    height: "8.52px",
+                                                    backgroundColor: "#C32026",
+                                                    borderRadius: "100%",
+                                                }}
+                                            ></div>
+                                            <span
+                                                style={{
+                                                    fontWeight: 400,
+                                                    fontSize: "16px",
+                                                    lineHeight: "24px",
+                                                }}
+                                            >
+                                                Slow Moving
+                                            </span>
+                                        </div>
                                     )}
                                 </td>
                             </tr>
@@ -126,7 +247,7 @@ const SalesVelocityTable = () => {
                 </table>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default SalesVelocityTable
+export default SalesVelocityTable;

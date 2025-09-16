@@ -116,7 +116,4 @@ export const salesVelocityData = [
   { model: "Renault Captur", turnRate: "1.8x", avgDays: "62 days", status: "Fast Moving" },
   { model: "Peugeot 308", turnRate: "1.1x", avgDays: "62 days", status: "Average" },
   { model: "Citroën C4", turnRate: "0.7x", avgDays: "62 days", status: "Slow Moving" },
-  { model: "Clio", turnRate: "2.3x", avgDays: "62 days", status: "Fast Moving" },
-  { model: "Captur", turnRate: "1.8x", avgDays: "62 days", status: "Fast Moving" },
-  { model: "308", turnRate: "1.1x", avgDays: "62 days", status: "Average" }
 ];

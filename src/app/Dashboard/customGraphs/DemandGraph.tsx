@@ -130,7 +130,7 @@ const DemandGraph = () => {
                 type="category"
                 style={{
                   fontSize: 10,
-                  fontWeight: 700,
+                  fontWeight: 500,
                   fill: "#565656",
                   whiteSpace: "nowrap",
                   lineHeight: "15.07px",

@@ -2,7 +2,7 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import styles from "../../../styles/header.module.css";
+import styles from "../../styles/header.module.css";
 import Image from "next/image";
 import {
   dealerItems,
@@ -10,8 +10,8 @@ import {
   modelItems,
   searchRadiusItems,
   previousDaysItems,
-} from "../../../utils/menuItems";
-import CustomDropdown from "../../../components/customDropdown";
+} from "../../utils/menuItems";
+import CustomDropdown from "../../components/customDropdown";
 
 const Header = () => {
   const pathname = usePathname();

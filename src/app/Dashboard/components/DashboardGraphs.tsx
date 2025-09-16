@@ -10,15 +10,14 @@ const DashboardGraphs: React.FC = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        gap: "24px",
-        marginTop: "24px",
+        gap: "40px",
       }}
     >
-      <div style={{ display: "flex", gap: "24px" }}>
+      <div style={{ display: "flex", gap: "40px" }}>
         <DemandGraph />
         <StockDistributionGraph />
       </div>
-      <div style={{ display: "flex", gap: "24px" }}>
+      <div style={{ display: "flex", gap: "40px" }}>
         <MarketOpputunityGraph />
         <SalesVelocityTable />
       </div>
