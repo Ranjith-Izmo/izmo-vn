@@ -1,5 +1,5 @@
 import React from 'react'
-import CompetitiveBenchmark from './components/competitiveBenchmark'
+import CompetitiveBenchmark from '../../components/competitive-benchmark/competitiveBenchmark'
 
 const Page = () => {
   return (
