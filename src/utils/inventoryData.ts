@@ -50,3 +50,42 @@ export const inventoryLevelData = [
   { week: "W7", value: 235 },
   { week: "W8", value: 235 },
 ]
+
+export const inventoryListTableData = [
+    {
+        stock: "RC4522",
+        make: "Renault Clio",
+        variant: "Evolution Tce 90",
+        type: "Hatchback, Red",
+        price: "€19,450",
+        days: "28 days",
+        status: "Active",
+    },
+    {
+        stock: "PC3078",
+        make: "Peugeot 308",
+        variant: "Allura PureTech 130",
+        type: "Hatchback, Blue",
+        price: "€24,750",
+        days: "46 days",
+        status: "Aging Stock",
+    },
+    {
+        stock: "CA5642",
+        make: "Citroën C4",
+        variant: "Shine BlueHDi 130",
+        type: "SUV, Orange",
+        price: "€22,890",
+        days: "12 days",
+        status: "Active",
+    },
+    {
+        stock: "RA7721",
+        make: "Renault Arkana",
+        variant: "RS Line E-Tech 145",
+        type: "Hatchback, White",
+        price: "€15,000",
+        days: "8 days",
+        status: "Active",
+    },
+];
