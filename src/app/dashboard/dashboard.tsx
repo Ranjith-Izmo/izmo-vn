@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { Typography } from "antd";
-import CustomCard from "../../../components/customCard";
-import CustomRecommendationCard from "../../../components/customRecommendationCard";
-import { dashboardCardsData, dashboardRecommendationsData } from "../../../utils/dashboardData";
-import DashboardGraphs from "./dashboardGraphs";
+import CustomCard from "../../components/common/customCard";
+import CustomRecommendationCard from "../../components/common/customRecommendationCard";
+import { dashboardCardsData, dashboardRecommendationsData } from "../../utils/dashboardData";
+import DashboardGraphs from "../../components/dashboard/components/dashboardGraphs";
 
 const Dashboard = () => {
   const { Title } = Typography;

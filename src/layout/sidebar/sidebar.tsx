@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { sidebarMenuItems } from "../../components/sidebarMenuItems";
+import { sidebarMenuItems } from "../../components/common/sidebarMenuItems";
 import styles from "../../styles/sidebar.module.css";
 
 

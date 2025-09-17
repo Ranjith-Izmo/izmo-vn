@@ -1,9 +1,9 @@
 import React from 'react'
-import CustomCard from '../../../components/customCard'
-import { inventoryCardData } from '../../../utils/inventoryData'
-import InventoryOrderGraph from './inventoryOrderGraph'
-import InventoryWeekGraph from './inventoryWeekGraph'
-import InventoryListTable from './invetoryListTable'
+import CustomCard from '../common/customCard'
+import { inventoryCardData } from '../../utils/inventoryData'
+import InventoryOrderGraph from './components/inventoryOrderGraph'
+import InventoryWeekGraph from './components/inventoryWeekGraph'
+import InventoryListTable from './components/invetoryListTable'
 
 const inventoryManagement = () => {
   return (

@@ -11,7 +11,7 @@ import {
   searchRadiusItems,
   previousDaysItems,
 } from "../../utils/menuItems";
-import CustomDropdown from "../../components/customDropdown";
+import CustomDropdown from "../../components/common/customDropdown";
 
 const Header = () => {
   const pathname = usePathname();
