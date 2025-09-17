@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Button } from "antd";
+import { Typography } from "antd";
 import Pagination from "../../common/dataTable/pagination";
 import { StatusPill } from "../../../components/common/dataTable/statusPill";
 import { modelSpecificTableData } from "../../../utils/marketAnalyticsData";
