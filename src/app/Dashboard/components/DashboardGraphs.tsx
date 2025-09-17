@@ -1,8 +1,8 @@
 import React from "react";
-import DemandGraph from "../customGraphs/DemandGraph";
-import StockDistributionGraph from "../customGraphs/StockDistributionGraph";
-import MarketOpputunityGraph from "../customGraphs/MarketOpputunityGraph";
-import SalesVelocityTable from "../customGraphs/SalesVelocityTable";
+import DemandGraph from "../customGraphs/demandGraph";
+import StockDistributionGraph from "../customGraphs/stockDistributionGraph";
+import MarketOpputunityGraph from "../customGraphs/marketOpputunityGraph";
+import SalesVelocityTable from "../customGraphs/salesVelocityTable";
 
 const DashboardGraphs: React.FC = () => {
   return (
