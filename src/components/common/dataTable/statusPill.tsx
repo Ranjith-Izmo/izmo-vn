@@ -1,7 +1,7 @@
 export const StatusPill = ({ status }: { status: string }) => {
   let color = "#259800";
-  if (status === "Aging Stock" || status === "Slow Moving") color = "#C32026";
-  if (status === "Average") color = "#F2B005";
+  if (status === "Aging Stock" || status === "Slow Moving" || status === "Low") color = "#C32026";
+  if (status === "Average" || status === "Medium") color = "#F2B005";
 
   return (
     <div

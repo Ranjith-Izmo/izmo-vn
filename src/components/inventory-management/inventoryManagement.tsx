@@ -7,7 +7,7 @@ import InventoryListTable from './components/invetoryListTable'
 
 const inventoryManagement = () => {
   return (
-      <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
 
       {/* Header Section */}
       <div
@@ -24,7 +24,7 @@ const inventoryManagement = () => {
       </div>
 
       {/* Graph Section */}
-      <div style={{ display: "grid",  gridRow: 1,  gridTemplateColumns: "repeat(2, 1fr)",flexWrap: "wrap", gap: "40px" }}>
+      <div style={{ display: "grid", gridRow: 1, gridTemplateColumns: "repeat(2, 1fr)", flexWrap: "wrap", gap: "40px" }}>
         <InventoryOrderGraph />
         <InventoryWeekGraph />
       </div>

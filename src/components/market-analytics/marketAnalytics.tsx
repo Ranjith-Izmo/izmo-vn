@@ -1,31 +1,28 @@
 import React from 'react'
+import CustomCard from '../common/customCard'
+import { marketAnalyticsCardData } from '../../utils/marketAnalyticsData'
+import PriceMarketTrendGraph from './components/priceMarketTrendGraph'
+import ModelSpecificTable from './components/modelSpecificTable'
 
 const MarketAnalytics = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "60vh",
-      }}
-    >
+     <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+      {/* Header Section */}
       <div
         style={{
-          background: "#F5F6FA",
-          border: "2px dashed #A0AEC0",
-          borderRadius: "12px",
-          padding: "48px 32px",
-          textAlign: "center",
-          boxShadow: "0px 1px 2px 0px #1018280D",
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: "14px",
+          flexWrap: "wrap",
         }}
       >
-        <h2 style={{ color: "#A0AEC0", marginBottom: "16px" }}>
-          🚧 Under Development 🚧
-        </h2>
-        <p style={{ color: "#718096", fontSize: "18px" }}>Coming Soon...</p>
+        {marketAnalyticsCardData.map((card, idx) => (
+          <CustomCard key={idx} {...card} />
+        ))}
       </div>
+        <PriceMarketTrendGraph/>
+        <ModelSpecificTable/>
+
     </div>
   )
 }
