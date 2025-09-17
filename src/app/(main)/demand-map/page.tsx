@@ -1,9 +1,9 @@
+import DemandMap from '../../../components/demand-map/demandMap'
 import React from 'react'
-import Settings from '../../components/settings/settings'
 
 const Page = () => {
   return (
-    <Settings />
+    <DemandMap />
   )
 }
 

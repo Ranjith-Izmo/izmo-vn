@@ -1,4 +1,4 @@
-import DemandAnalysis from '../../components/demand-analysis/demandAnalysis'
+import DemandAnalysis from '../../../components/demand-analysis/demandAnalysis'
 import React from 'react'
 
 const Page = () => {
