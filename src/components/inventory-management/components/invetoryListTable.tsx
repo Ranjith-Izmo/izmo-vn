@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Button } from "antd";
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { inventoryListTableData } from "../../../utils/inventoryData";
+import Pagination from "../../../components/common/dataTable/pagination";
 
 const StatusPill = ({ status }: { status: string }) => {
   let color = "#259800";
@@ -60,6 +60,7 @@ const InventoryListTable = () => {
             fontStyle: "Medium",
             fontSize: "28px",
             lineHeight: "100%",
+            letterSpacing: "0%",
             color: "#000000",
           }}
         >
@@ -270,111 +271,7 @@ const InventoryListTable = () => {
         </table>
 
         {/* Pagination */}
-        <div
-          style={{
-            marginTop: "16px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            fontSize: "20px",
-            fontWeight: 400,
-            lineHeight: "28px",
-            color: "#727272",
-          }}
-        >
-          <span>Showing 1 to 4 of 246 entries</span>
-          <div style={{ display: "flex", gap: "10px" }}>
-            <div
-              style={{
-                width: "49px",
-                height: "48px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "1px solid #CCCCCC",
-                color: "#000000",
-                borderRadius: "6px",
-              }}
-            >
-              <LeftOutlined
-                style={{ width: "24px", height: "24px", color: "#000000" }}
-              />
-            </div>
-            <Button
-              style={{
-                width: "49px",
-                height: "48px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "1px solid #CCCCCC",
-                color: "#555555",
-                borderRadius: "6px",
-                fontWeight: "500",
-                fontStyle: "Medium",
-                fontSize: "18px",
-                lineHeight: "26px",
-                backgroundColor: "#ffffff",
-              }}
-            >
-              1
-            </Button>
-            <Button
-              style={{
-                width: "49px",
-                height: "48px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "1px solid #CCCCCC",
-                color: "#555555",
-                borderRadius: "6px",
-                fontWeight: "500",
-                fontStyle: "Medium",
-                fontSize: "18px",
-                lineHeight: "26px",
-                backgroundColor: "#ffffff",
-              }}
-            >
-              2
-            </Button>
-            <Button
-              style={{
-                width: "49px",
-                height: "48px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "1px solid #CCCCCC",
-                color: "#555555",
-                borderRadius: "6px",
-                fontWeight: "500",
-                fontStyle: "Medium",
-                fontSize: "18px",
-                lineHeight: "26px",
-                backgroundColor: "#ffffff",
-              }}
-            >
-              3
-            </Button>
-            <div
-              style={{
-                width: "49px",
-                height: "48px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "1px solid #CCCCCC",
-                color: "#000000",
-                borderRadius: "6px",
-              }}
-            >
-              <RightOutlined
-                style={{ width: "24px", height: "24px", color: "#000000" }}
-              />
-            </div>
-          </div>
-        </div>
+        <Pagination />
       </div>
     </>
   );
