@@ -11,7 +11,7 @@ import {
   Bar,
 } from "recharts";
 
-const TopModelsVolumeGraph = () => {
+const RegionalAveragePriceGraph = () => {
   return (
     <div
       style={{
@@ -35,7 +35,7 @@ const TopModelsVolumeGraph = () => {
           paddingBottom: "30px",
         }}
       >
-        Top Models vs Regional Search Volume
+        Yours Price vs Regional Average 
       </Typography>
 
       {/* Legend */}
@@ -59,7 +59,7 @@ const TopModelsVolumeGraph = () => {
             }}
           ></div>
           <Typography style={{ fontSize: "18px", color: "#001940" }}>
-            Search Volume
+            Your Price
           </Typography>
         </div>
 
@@ -73,7 +73,7 @@ const TopModelsVolumeGraph = () => {
             }}
           ></div>
           <Typography style={{ fontSize: "18px", color: "#001940" }}>
-            Your Inventory
+            Regional Average
           </Typography>
         </div>
       </div>
@@ -124,4 +124,4 @@ const TopModelsVolumeGraph = () => {
   );
 };
 
-export default TopModelsVolumeGraph;
+export default RegionalAveragePriceGraph;

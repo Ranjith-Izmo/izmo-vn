@@ -68,7 +68,7 @@ const MissingAlertTable = () => {
                 Search Volume
               </th>
               <th style={{ padding: "12px", textAlign: "end" }}>Stock</th>
-              <th style={{ padding: "12px",paddingRight:"24px", textAlign: "end" }}>
+              <th style={{ padding: "12px", paddingRight: "24px", textAlign: "end" }}>
                 Opportunity Score
               </th>
             </tr>
@@ -80,6 +80,8 @@ const MissingAlertTable = () => {
                 style={{
                   borderBottom: "1px solid #E5E5E5",
                   background: "#FAFAFA",
+                  fontSize: "18px",
+                  lineHeight: "26px",
                 }}
               >
                 <td
@@ -88,7 +90,7 @@ const MissingAlertTable = () => {
                     height: "58px",
                     backgroundColor: "#ffffff",
                     padding: "8px",
-                  paddingLeft: "24px",
+                    paddingLeft: "24px",
                     textAlign: "start",
                   }}
                 >
@@ -133,8 +135,10 @@ const MissingAlertTable = () => {
 
                 <td
                   style={{
+                    fontSize: "18px",
+                    lineHeight: "26px",
                     padding: "16px",
-                    paddingRight:"24px",
+                    paddingRight: "24px",
                     display: "flex",
                     justifyContent: "end",
                     backgroundColor: "#ffffff",

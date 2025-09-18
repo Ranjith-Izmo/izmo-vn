@@ -119,6 +119,8 @@ const InventoryListTable = () => {
               >
                 <td
                   style={{
+                    fontSize: "18px",
+                    lineHeight: "26px",
                     borderRadius: "4px",
                     height: "58px",
                     backgroundColor: "#ffffff",
@@ -130,6 +132,8 @@ const InventoryListTable = () => {
                 </td>
                 <td
                   style={{
+                    fontSize: "18px",
+                    lineHeight: "26px",
                     padding: "16px",
                     textAlign: "end",
                     borderRadius: "4px",
@@ -139,6 +143,8 @@ const InventoryListTable = () => {
                 >
                   <div
                     style={{
+                      fontSize: "18px",
+                      lineHeight: "26px",
                       fontWeight: 600,
                       color: "#000000",
                       textAlign: "end",
@@ -149,7 +155,8 @@ const InventoryListTable = () => {
                   </div>
                   <div
                     style={{
-                      fontSize: "14px",
+                      fontSize: "18px",
+                      lineHeight: "26px",
                       color: "#727272",
                       textAlign: "end",
                     }}
@@ -159,6 +166,8 @@ const InventoryListTable = () => {
                 </td>
                 <td
                   style={{
+                    fontSize: "18px",
+                    lineHeight: "26px",
                     padding: "16px",
                     color: "#727272",
                     textAlign: "end",
@@ -171,6 +180,8 @@ const InventoryListTable = () => {
                 </td>
                 <td
                   style={{
+                    fontSize: "18px",
+                    lineHeight: "26px",
                     borderRadius: "4px",
                     textAlign: "end",
                     height: "58px",
@@ -183,6 +194,8 @@ const InventoryListTable = () => {
                 </td>
                 <td
                   style={{
+                    fontSize: "18px",
+                    lineHeight: "26px",
                     padding: "16px",
                     textAlign: "end",
                     borderRadius: "4px",
@@ -195,6 +208,8 @@ const InventoryListTable = () => {
                 </td>
                 <td
                   style={{
+                    fontSize: "18px",
+                    lineHeight: "26px",
                     padding: "16px",
                     display: "flex",
                     justifyContent: "end",

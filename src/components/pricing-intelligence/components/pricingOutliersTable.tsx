@@ -1,12 +1,13 @@
 import React from "react";
-import { Typography } from "antd";
-import Pagination from "../../common/dataTable/pagination";
+import { Typography, Button } from "antd";
+import Pagination from "../../../components/common/dataTable/pagination";
 import { StatusPill } from "../../../components/common/dataTable/statusPill";
-import { modelSpecificTableData } from "../../../utils/marketAnalyticsData";
+import { pricingOutliersTableData } from "../../../utils/pricingIntelligenceData";
 
-const ModelSpecificTable = () => {
+const PricingOutliersTable = () => {
   return (
     <>
+
       <Typography
         style={{
           fontFamily: "Inter",
@@ -18,7 +19,7 @@ const ModelSpecificTable = () => {
           color: "#000000",
         }}
       >
-        Model-specific Market Analysis
+        Pricing Outliers
       </Typography>
 
       <div
@@ -61,31 +62,31 @@ const ModelSpecificTable = () => {
                   textAlign: "center",
                 }}
               >
-                Model
+                Stock #
               </th>
-              <th style={{ padding: "12px", textAlign: "end" }}>Inventory</th>
-              <th style={{ padding: "12px", textAlign: "end" }}>Your Avg Price</th>
-              <th style={{ padding: "12px", textAlign: "end" }}>Market Avg Price</th>
+              <th style={{ padding: "12px", textAlign: "end" }}>Make/Model</th>
+              <th style={{ padding: "12px", textAlign: "end" }}>Your Price</th>
               <th style={{ padding: "12px", textAlign: "end" }}>
-                Price Difference
+                Regional Avg
               </th>
-              <th style={{ padding: "12px", textAlign: "end" }}>Turn Rate</th>
-              <th style={{ padding: "12px", textAlign: "end" }}>Market Opputunity</th>
+              <th style={{ padding: "12px", textAlign: "end" }}>Difference</th>
+              <th style={{ padding: "12px", textAlign: "end" }}>Suggested Price</th>
+              <th style={{ padding: "12px", textAlign: "end" }}>Actions</th>
             </tr>
           </thead>
           <tbody>
-            {modelSpecificTableData.map((row, idx) => (
+            {pricingOutliersTableData.map((row, idx) => (
               <tr
                 key={idx}
                 style={{
                   borderBottom: "1px solid #E5E5E5",
                   background: "#FAFAFA",
+                  fontSize: "18px",
+                  lineHeight: "26px",
                 }}
               >
                 <td
                   style={{
-                    fontSize: "18px",
-                    lineHeight: "26px",
                     borderRadius: "4px",
                     height: "58px",
                     backgroundColor: "#ffffff",
@@ -93,12 +94,39 @@ const ModelSpecificTable = () => {
                     textAlign: "center",
                   }}
                 >
-                  {row.Model}
+                  {row.stock}
                 </td>
                 <td
                   style={{
-                    fontSize: "18px",
-                    lineHeight: "26px",
+                    padding: "16px",
+                    textAlign: "end",
+                    borderRadius: "4px",
+                    height: "58px",
+                    backgroundColor: "#ffffff",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontWeight: 600,
+                      color: "#000000",
+                      textAlign: "end",
+                      paddingBottom: "6px",
+                    }}
+                  >
+                    {row.make}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "14px",
+                      color: "#727272",
+                      textAlign: "end",
+                    }}
+                  >
+                    {row.variant}
+                  </div>
+                </td>
+                <td
+                  style={{
                     padding: "16px",
                     color: "#727272",
                     textAlign: "end",
@@ -107,81 +135,65 @@ const ModelSpecificTable = () => {
                     backgroundColor: "#ffffff",
                   }}
                 >
-                  {row.Inventory}
-
+                  {row.yourPrice}
                 </td>
                 <td
                   style={{
-                    fontSize: "18px",
-                    lineHeight: "26px",
-                    padding: "16px",
-                    color: "#727272",
-                    textAlign: "end",
-                    borderRadius: "4px",
-                    height: "58px",
-                    backgroundColor: "#ffffff",
-                  }}  
-                >
-                  €{row.YourAvgPrice}
-                </td>
-                <td
-                  style={{
-                    fontSize: "18px",
-                    lineHeight: "26px",
-                    padding: "16px",
-                    color: "#727272",
-                    textAlign: "end",
-                    borderRadius: "4px",
-                    height: "58px",
-                    backgroundColor: "#ffffff",
-                  }}
-                >
-                  €{row.MarketAvg}
-                </td>
-                <td
-                  style={{
-                    fontSize: "18px",
-                    lineHeight: "26px",
                     borderRadius: "4px",
                     textAlign: "end",
                     height: "58px",
                     backgroundColor: "#ffffff",
                     padding: "8px",
-                    color: row.PriceDifference?.includes("+")
-                      ? "#259800"
-                      : row.PriceDifference?.includes("-")
-                        ? "#C32026"
-                        : "#727272",
-                  }}
-                >
-                  {row.PriceDifference}
-                </td>
-
-                <td
-                  style={{
-                    fontSize: "18px",
-                    lineHeight: "26px",
-                    padding: "16px",
-                    textAlign: "end",
-                    borderRadius: "4px",
-                    height: "58px",
-                    backgroundColor: "#ffffff",
                     color: "#727272",
                   }}
                 >
-                  {row.TurnRate}
+                  {row.regionalPrice}
                 </td>
                 <td
                   style={{
-                    fontSize: "18px",
-                    lineHeight: "26px",
                     padding: "16px",
                     display: "flex",
                     justifyContent: "end",
                     backgroundColor: "#ffffff",
                   }}
                 >
-                  <StatusPill status={row.MktOpportunity} />
+                  <StatusPill status={row.difference} />
+                </td>
+                <td
+                  style={{
+                    padding: "16px",
+                    textAlign: "end",
+                    borderRadius: "4px",
+                    height: "58px",
+                    backgroundColor: "#ffffff",
+                    color: "#727272",
+                  }}
+                >
+                  {row.suggestedPrice}
+                </td>
+
+                <td
+                  style={{
+                    padding: "16px",
+                    textAlign: "end",
+                    backgroundColor: "#ffffff",
+                  }}
+                >
+                  <Button
+                    style={{
+                      fontWeight: 500,
+                      fontStyle: "Medium",
+                      height: "48px",
+                      fontSize: "18px",
+                      lineHeight: "26px",
+                      border: "1px solid #CCCCCC",
+                      borderRadius: "6px",
+                      padding: "10px 22px",
+                      color: "#555555",
+                    }}
+                  >
+                    Adjust
+                  </Button>
                 </td>
               </tr>
             ))}
@@ -195,4 +207,6 @@ const ModelSpecificTable = () => {
   );
 };
 
-export default ModelSpecificTable;
+export default PricingOutliersTable;
+
+

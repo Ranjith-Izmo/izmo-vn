@@ -60,8 +60,8 @@ export const modelSpecificTableData = [
     {
         "Model": "Renault Clio",
         "Inventory": 42,
-        "YourAvgPrice": 19450,
-        "MarketAvg": 17850,
+        "YourAvgPrice": "19,450",
+        "MarketAvg": "17,850",
         "PriceDifference": "+8.7%",
         "TurnRate": "2.3x",
         "MktOpportunity": "High"
@@ -69,8 +69,8 @@ export const modelSpecificTableData = [
     {
         "Model": "Peugeot 308",
         "Inventory": 31,
-        "YourAvgPrice": 24750,
-        "MarketAvg": 22450,
+        "YourAvgPrice": "24,750",
+        "MarketAvg": "22,450",
         "PriceDifference": "+10.2%",
         "TurnRate": "1.1x",
         "MktOpportunity": "Medium"
@@ -78,8 +78,8 @@ export const modelSpecificTableData = [
     {
         "Model": "Citroën C4",
         "Inventory": 28,
-        "YourAvgPrice": 15990,
-        "MarketAvg": 17450,
+        "YourAvgPrice": "15,990",
+        "MarketAvg": "17,450",
         "PriceDifference": "-8.2%",
         "TurnRate": "1.5x",
         "MktOpportunity": "High"
@@ -87,8 +87,8 @@ export const modelSpecificTableData = [
     {
         "Model": "DS 3 Crossback",
         "Inventory": 14,
-        "YourAvgPrice": 28950,
-        "MarketAvg": 21100,
+        "YourAvgPrice": "28,950",
+        "MarketAvg": "21,100",
         "PriceDifference": "+6.8%",
         "TurnRate": "0.9x",
         "MktOpportunity": "Low"

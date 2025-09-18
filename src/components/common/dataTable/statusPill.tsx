@@ -1,8 +1,8 @@
 export const StatusPill = ({ status }: { status: string }) => {
   let color = "#259800";
-  if (status === "Aging Stock" || status === "Slow Moving" || status === "Low") color = "#C32026";
+  if (status === "Aging Stock" || status === "Slow Moving" || status === "Low" || status.includes("+")) color = "#C32026";
   if (status === "Average" || status === "Medium" || status.includes("Medium")) color = "#F2B005";
- 
+
 
   return (
     <div
@@ -19,14 +19,17 @@ export const StatusPill = ({ status }: { status: string }) => {
         width: "fit-content",
       }}
     >
-      <div
-        style={{
-          width: "8.52px",
-          height: "8.52px",
-          backgroundColor: `${color}`,
-          borderRadius: "100%",
-        }}
-      ></div>
+      {!status.includes("+") && !status.includes("-") && (
+        <div
+          style={{
+            width: "8.52px",
+            height: "8.52px",
+            backgroundColor: `${color}`,
+            borderRadius: "100%",
+          }}
+        ></div>
+      )}
+
       <span
         style={{
           fontWeight: 400,
