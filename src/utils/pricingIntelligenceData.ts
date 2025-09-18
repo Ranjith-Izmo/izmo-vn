@@ -53,19 +53,19 @@ export const pricingIntelligenceCardData = [
     },
 ];
 
-export const regionalAveragePriceGraphData = [
-    { "model": "Peugeot 2008", "searchVolume": 245, "inventory": 15 },
-    { "model": "Renault Arkana", "searchVolume": 205, "inventory": 12 },
-    { "model": "C5 Aircross", "searchVolume": 170, "inventory": 8 },
-    { "model": "VW ID 4", "searchVolume": 130, "inventory": 20 },
-    { "model": "Peugeot 3008", "searchVolume": 105, "inventory": 25 },
-    { "model": "Renault Clio", "searchVolume": 90, "inventory": 235 },
-    { "model": "Peugeot 208", "searchVolume": 70, "inventory": 215 },
-    { "model": "Citroën C3", "searchVolume": 35, "inventory": 125 },
-    { "model": "R. Captur", "searchVolume": 20, "inventory": 110 },
-    { "model": "Peugeot 308", "searchVolume": 15, "inventory": 95 }
-]
 
+export const regionalAveragePriceGraphData = [
+    { "model": "Peugeot 2008", "searchVolume": 18, "inventory": 15 },
+    { "model": "Renault Arkana", "searchVolume": 25, "inventory": 20 },
+    { "model": "C5 Aircross", "searchVolume": 13, "inventory": 8 },
+    { "model": "VW ID 4", "searchVolume": 29, "inventory": 27 },
+    { "model": "Peugeot 3008", "searchVolume": 20, "inventory": 18 },
+    { "model": "Renault Clio", "searchVolume": 14, "inventory": 13 },
+    { "model": "Peugeot 208", "searchVolume": 23, "inventory": 20 },
+    { "model": "Citroën C3", "searchVolume": 26, "inventory": 24 },
+    { "model": "R. Captur", "searchVolume": 27, "inventory": 25 },
+    { "model": "Peugeot 308", "searchVolume": 19, "inventory": 16 }
+]
 export const pricingOutliersTableData = [
     {
         stock: "RC4522",

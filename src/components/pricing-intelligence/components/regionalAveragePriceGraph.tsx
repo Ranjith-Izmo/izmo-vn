@@ -1,5 +1,5 @@
 "use client";
-import { topModelsVolumeGraphData } from "@/utils/demandAnalysisData";
+import { regionalAveragePriceGraphData } from "@/utils/pricingIntelligenceData";
 import { Typography } from "antd";
 import React from "react";
 import {
@@ -81,7 +81,7 @@ const RegionalAveragePriceGraph = () => {
       {/* Bar Chart */}
       <ResponsiveContainer width="100%" height={440}>
         <BarChart
-          data={topModelsVolumeGraphData}
+          data={regionalAveragePriceGraphData}
           margin={{ top: 40, right: 20, left: 0, bottom: 0 }}
         >
           <CartesianGrid
