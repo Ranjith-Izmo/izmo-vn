@@ -35,7 +35,7 @@ const RegionalAveragePriceGraph = () => {
           paddingBottom: "30px",
         }}
       >
-        Yours Price vs Regional Average 
+        Yours Price vs Regional Average
       </Typography>
 
       {/* Legend */}
@@ -82,7 +82,7 @@ const RegionalAveragePriceGraph = () => {
       <ResponsiveContainer width="100%" height={440}>
         <BarChart
           data={topModelsVolumeGraphData}
-          margin={{ top: 60, right: 20, left: 40, bottom: 0 }}
+          margin={{ top: 40, right: 20, left: 0, bottom: 0 }}
         >
           <CartesianGrid
             vertical={false}
@@ -99,25 +99,42 @@ const RegionalAveragePriceGraph = () => {
               fontWeight: 400,
               fill: "#565656",
             }}
+             tick={{
+              textAnchor: "middle",
+              dy: 5,
+            }}
           />
-          <YAxis 
+          <YAxis
+            domain={[0, 30]}
+            ticks={[0, 5, 10, 15, 20, 25, 30]}
             tickLine={false}
+            style={{
+              fontSize: 18,
+              fontWeight: 400,
+              fill: "#565656",
+              lineHeight: "120%",
+            }}
+            tick={{
+              textAnchor: "middle",
+              dx: -30,
+            }}
+            tickFormatter={(value) => `€${value.toLocaleString()}k`}
           />
-           <Bar
+          <Bar
             dataKey="searchVolume"
             barSize={40}
             name="Search Volume"
             fill="#2E90FA"
-            radius={[6, 6, 0, 0]}   
+            radius={[6, 6, 0, 0]}
           />
           <Bar
             dataKey="inventory"
             barSize={40}
             name="Your Inventory"
             fill="#B5D9FF"
-            radius={[6, 6, 0, 0]}   
+            radius={[6, 6, 0, 0]}
           />
-         
+
         </BarChart>
       </ResponsiveContainer>
     </div>

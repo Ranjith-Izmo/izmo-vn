@@ -117,7 +117,6 @@ const PricingOutliersTable = () => {
                   </div>
                   <div
                     style={{
-                      fontSize: "14px",
                       color: "#727272",
                       textAlign: "end",
                     }}
